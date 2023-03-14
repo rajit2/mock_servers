@@ -1,0 +1,20 @@
+services:
+    model1:
+      container_name: model1
+      build: test_model_1/
+      command: bash -c "python3 test_model_1.py"
+      expose:
+        - 8001
+      ports: 
+        - 8001:8001
+      restart: always
+    
+    model2:
+      container_name: model2
+      build: test_model_2/
+      command: bash -c "python3 test_model_2.py"
+      expose:
+        - 8002
+      ports: 
+        - 8002:8002
+      restart: always
