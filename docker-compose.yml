@@ -18,3 +18,13 @@ services:
       ports: 
         - 8002:8002
       restart: always
+
+    model3:
+      container_name: model3
+      build: test_model_3/
+      command: bash -c "python3 test_model_3.py"
+      expose:
+        - 8003
+      ports: 
+        - 8003:8003
+      restart: always
